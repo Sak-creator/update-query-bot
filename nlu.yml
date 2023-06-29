@@ -1,0 +1,44 @@
+
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+
+- intent: provide_rowname
+  examples: |
+    - [change]{"entity": "update", "value": "Update"} [vendor's]{"entity": "rowname", "value": "vendor"} [Simran](update_name) whose name is [Sakshi](new_name) whose [experience](skill) is [greater]{"entity": "quantity", "value": ">"} than [18](number) yearsand customer id is [1256](customer_id)  
+    - [change]{"entity": "update", "value": "Update"} [vendor's]{"entity": "rowname", "value": "vendor"} [Riya](update_name) whose name is [Priya](new_name) whose [experience](skill) is [more]{"entity": "quantity", "value": ">"} than [3](number) years  and customer id is [546](customer_id)
+    - [update]{"entity": "update", "value": "Update"} [vendor's]{"entity": "rowname", "value": "vendor"} [Ranveer](update_name) whose name is [Raj](new_name) whose [experience](skill) is [above]{"entity": "quantity", "value": ">"} [56](number) years and customer id is [1232](customer_id)
+    - [update](update) [vendor's]{"entity": "rowname", "value": "vendor"} [Abhinav](update_name)whose name is [Abhay](new_name) whose [work](skill) is [less]{"entity": "quantity", "value": "<"} than [21](number) years and customer id is [8875](customer_id)
+    - [update](update) [vendor's]{"entity": "rowname", "value": "vendor"} [Priyanka](update_name) whose name is [Shloka](new_name) whose [work](skill) is [below]{"entity": "quantity", "value": "<"} than [8](number) years and customer id is [1128](customer_id)
+    - [update]{"entity": "update", "value": "Update"} [vendor's]{"entity": "rowname", "value": "vendor"} [Naman](update_name) whose name is [Rohan](new_name) whose [experience](skill) is [less]{"entity": "quantity", "value": "<"} [12](number) years and customer id is [7654](customer_id)
+    - [update]{"entity": "update", "value": "Update"} [vendor's]{"entity": "rowname", "value": "vendor"} [Sandy](update_name) whose name is [Naman](new_name) whose [experience](skill) is [equal]{"entity": "quantity", "value": "="} [34](number) years and customer id is [112995](customer_id)
+    - [update]{"entity": "update", "value": "Update"} [vendor's]{"entity": "rowname", "value": "vendor"} [Name](update_name) whose name is [Rose](new_name) whose [experience](skill) is [equal]{"entity": "quantity", "value": "="} to [5](number) years and customer id is [94783](customer_id)

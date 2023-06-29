@@ -1,0 +1,27 @@
+
+
+
+
+version: "3.1"
+
+stories:
+  - story: greet and goodbye
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: greet with information intake
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: provide_rowname
+      - action: generate_update_query_action
+    
+  - story: story path 3
+    steps:
+      - intent: provide_rowname
+      - action: generate_update_query_action
+
+  

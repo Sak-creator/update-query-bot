@@ -1,0 +1,91 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - provide_rowname
+  - display_update
+
+entities:
+  - rowname
+  - update_name
+  - skill
+  - update
+  - new_name
+  - number
+  - quantity
+  - customer_id
+ 
+
+slots:
+  rowname:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: rowname
+  update_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: update_name
+  skill:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: skill
+  new_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: new_name
+
+  update:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: update
+  number:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: number
+  quantity:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: quantity
+
+  customer_id:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: customer_id   
+  
+
+actions:
+
+  - generate_update_query_action
+ 
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_display_update:
+    - text: "Sure! Here is your SQL query: {querynew}"
+
+ 
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
